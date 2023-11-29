@@ -1,21 +1,31 @@
+import { PiMicrophoneThin } from 'react-icons/pi';
+import { IoIosSearch } from 'react-icons/io';
+import { FaPlus } from 'react-icons/fa';
+
 import css from './Searchbar.module.css';
 
 export const Searchbar = () => {
   return (
     <div className={css.searchbar}>
-      <div className={css.searchbar__header}>
+      <div className={css.searchbar__nav}>
+        <button type="button" className={css.button}>
+          Groups
+        </button>
         <span>Contacts</span>
-        <button type="button" className={css.button__add}>
-          +
+        <button type="button" className={css.button}>
+          <FaPlus />
         </button>
       </div>
-      <label htmlFor="" className={css.searchbar__label}>
+
+      <div className={css.input__container}>
+        <IoIosSearch className={css.icon__search} />
         <input
           type="text"
           placeholder="Search"
           className={css.searchbar__input}
         />
-      </label>
+        <PiMicrophoneThin className={css.icon__microphone} />
+      </div>
     </div>
   );
 };
