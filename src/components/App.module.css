@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 375px;
+  margin: 0 auto;
+ 
+
+  color: #010101;
+  font-size: 22px;
+ 
+}
