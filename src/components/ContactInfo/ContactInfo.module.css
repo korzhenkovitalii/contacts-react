@@ -1,0 +1,78 @@
+.contactInfo__container {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contactImg {
+  display: inline-block;
+  margin: 0 auto 14px;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.contactName {
+  margin-bottom: 27px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  gap: 10px;
+  color: #007aff;
+}
+
+.contactInfo__btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 58px;
+  gap: 5px;
+  background-color: #fff;
+  border-radius: 11px;
+  margin-bottom: 16px;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+
+  background-color: #fff;
+  border-radius: 11px;
+}
+
+.contactItem {
+  padding: 0 16px 0;
+}
+
+.phoneName {
+  display: block;
+  padding: 5px 0 5px;
+
+  font-size: 12px;
+}
+.phoneLink {
+  display: block;
+  padding: 5px 0 5px;
+
+  font-size: 14px;
+}
+.address {
+  margin: 13px 0 13px;
+}
