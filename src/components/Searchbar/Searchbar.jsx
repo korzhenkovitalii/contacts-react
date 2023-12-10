@@ -12,6 +12,7 @@ export const Searchbar = ({ setFilteredContacts, contacts, toggleModal }) => {
     const filteredContacts = contacts.filter(el =>
       el.name.toLowerCase().includes(inputValue)
     );
+
     setFilteredContacts(filteredContacts);
   };
 

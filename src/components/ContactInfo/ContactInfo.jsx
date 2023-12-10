@@ -6,7 +6,11 @@ import { IoIosMail } from 'react-icons/io';
 import css from './ContactInfo.module.css';
 import CSS from '../App.module.css';
 
-export const ContactInfo = () => {
+export const ContactInfo = ({
+  selectedContact,
+  toggleModal,
+  setToOpenModalChangeInfo,
+}) => {
   const contactInfoButtons = [
     {
       name: 'message',
@@ -26,18 +30,32 @@ export const ContactInfo = () => {
     },
   ];
 
+  const {
+    name = 'No name',
+    number = 'No number',
+    email = 'No email',
+    notes = '',
+  } = selectedContact;
+
   return (
     <>
       <div className={css.contactInfo__container}>
         <div className={CSS.header}>
-          <span>My info</span>
-          <button type="button" className={CSS.button}>
+          <span>Contact info</span>
+          <button
+            type="button"
+            className={CSS.button}
+            onClick={() => {
+              toggleModal();
+              setToOpenModalChangeInfo(true);
+            }}
+          >
             Change
           </button>
         </div>
         <div className={css.contactInfo}>
           <img src="" alt="A" className={css.contactImg} />
-          <span className={css.contactName}>Name Vitalii</span>
+          <span className={css.contactName}>{name}</span>
           <div className={css.buttons}>
             {contactInfoButtons.map((el, index) => (
               <div className={css.contactInfo__btn} key={index}>
@@ -50,14 +68,14 @@ export const ContactInfo = () => {
           <div className={css.contactList}>
             <div className={css.contactItem}>
               <span className={css.phoneName}>mobile</span>
-              <a className={css.phoneLink} href="tel:+380961111111">
-                +380961111111
+              <a className={css.phoneLink} href={number}>
+                {number}
               </a>
             </div>
             <div className={css.contactItem}>
               <span className={css.phoneName}>email</span>
-              <a className={css.phoneLink} href="mailto:info@devstudio.com">
-                info@devstudio.com
+              <a className={css.phoneLink} href={email}>
+                {email}
               </a>
             </div>
           </div>
@@ -92,11 +110,7 @@ export const ContactInfo = () => {
         <div className={css.contactList}>
           <div className={css.contactItem}>
             <span className={css.phoneName}>Notes:</span>
-            <div className={css.phoneLink}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
-              sapiente perferendis, fuga rerum voluptates minus quo maxime
-              pariatur deleniti dolorum expedita temporibus.
-            </div>
+            <div className={css.phoneLink}>{notes}</div>
           </div>
         </div>
       </div>
