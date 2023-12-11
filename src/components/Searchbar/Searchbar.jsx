@@ -1,4 +1,3 @@
-import { PiMicrophoneThin } from 'react-icons/pi';
 import { IoIosSearch } from 'react-icons/io';
 import { FaPlus } from 'react-icons/fa';
 
@@ -19,10 +18,8 @@ export const Searchbar = ({ setFilteredContacts, contacts, toggleModal }) => {
   return (
     <div className={css.searchbar}>
       <div className={CSS.header}>
-        <button type="button" className={CSS.button}>
-          Groups
-        </button>
-        <span>Contacts</span>
+        
+        <span>Phonebook</span>
         <button
           type="button"
           className={CSS.button}
@@ -40,7 +37,7 @@ export const Searchbar = ({ setFilteredContacts, contacts, toggleModal }) => {
           className={css.searchbar__input}
           onChange={filterContacts}
         />
-        <PiMicrophoneThin className={css.icon__microphone} />
+       
       </div>
     </div>
   );
